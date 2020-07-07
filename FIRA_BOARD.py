@@ -1,3 +1,6 @@
+#This is a text based five in a row game that will be used for machine learning
+
+
 import numpy as np
 
 class BOARD:
