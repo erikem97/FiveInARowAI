@@ -1,6 +1,3 @@
-#This is a text based five in a row game that will be used for machine learning
-
-
 import numpy as np
 
 class BOARD:
@@ -19,8 +16,8 @@ class BOARD:
     def check_win(self, mark):
         horizontal = 0
 
-        for row in range(self.column_length):
-            for column in range(self.row_length):
+        for row in range(self.row_length):
+            for column in range(self.column_length):
                 if horizontal == 5:
                     return True
                 if self.board[row, column] == mark:
@@ -112,7 +109,7 @@ class BOARD:
 
 
 def Game():
-    board = BOARD(row_length=22, column_length=22)
+    board = BOARD(row_length=15, column_length=15)
     board.print_board()
     while(True):
 
