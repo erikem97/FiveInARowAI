@@ -62,6 +62,34 @@ class BOARD:
                 if diagonal_check == 5:
                     return True
 
+            diagonal_check = 0
+            diagonal = np.fliplr(self.board).diagonal()
+            for i in range(len(diagonal)):
+                if diagonal[i] == mark:
+                    diagonal_check += 1
+                else:
+                    diagonal_check = 0
+                if diagonal_check == 5:
+                    return True
+
+            for i in range(round(self.number_diagonals / 2)):
+                diagonal = np.fliplr(self.board).diagonal()
+                for i in range(len(diagonal)):
+                    if diagonal[i] == mark:
+                        diagonal_check += 1
+                    else:
+                        diagonal_check = 0
+                    if diagonal_check == 5:
+                        return True
+                diagonal = np.fliplr(self.board).diagonal()
+                for i in range(len(diagonal)):
+                    if diagonal[i] == mark:
+                        diagonal_check += 1
+                    else:
+                        diagonal_check = 0
+                    if diagonal_check == 5:
+                        return True
+
 
 
 
